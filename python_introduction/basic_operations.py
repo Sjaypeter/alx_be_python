@@ -1,4 +1,4 @@
-number1= 10
+number1 = 10
 number2 = 5
 x = number1 + number2
 y = number1 - number2
