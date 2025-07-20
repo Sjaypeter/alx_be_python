@@ -3,5 +3,6 @@ while True:
     for x in range(size_of_pattern):
         for y in range(size_of_pattern):
             print("*", end=" ")
+        print()
 
         
