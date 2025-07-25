@@ -1,6 +1,5 @@
 
-def perform_operation(num1 :float, num2: float, operation: str):
-    operation = operation.lower()
+def perform_operation(num1, num2, operation):
     match operation:
         case"add":
             return num1 + num2
@@ -15,8 +14,8 @@ def perform_operation(num1 :float, num2: float, operation: str):
             else:
                 return num1/num2
         case _:
-            print("Error: Invalid operator")
-print(perform_operation(num1= 10, num2= 5, operation= "divide"))
+            print("Error: Invalid operation")
+perform_operation()
         
         
             
