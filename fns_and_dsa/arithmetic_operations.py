@@ -13,8 +13,7 @@ def perform_operation(num1, num2, operation):
             return num1/num2
     else:
         print("Error: Invalid operator")
-
-perform_operation()
+print((perform_operation(num1= 3,num2= 4,operation= "add")))
         
         
             
