@@ -2,15 +2,21 @@ from datetime import datetime, timedelta
 #1.Display current date and time
 def display_current_datetime():
     current_date = datetime.now()
-    print(f"{current_date}")
+    formated_date = current_date.strftime("%Y-%M-%D, %H:%M:%S")
+    print(f"Current date and time: {formated_date}")
+    return current_date
 #2.Calculate future date
-num_of_days = int(input("Enter the number of days to add to the current date: "))
-def  calculate_future_date():
-    tday = datetime.today()
-    tdelta = timedelta(days= num_of_days)
+try:
+    num_of_days = int(input("Enter the number of days to add to the current date: "))
+    def  calculate_future_date():
+        tday = datetime.today()
+        tdelta = timedelta(days= num_of_days)
 
-    future_date = tday + tdelta
-    print(future_date)
+        future_date = tday + tdelta
+        formatted_future_date = future_date.strftime("%Y-%M-%D")
+        print(f"Future date: {formatted_future_date}")
+except ValueError:
+    print("Please enter a valid integer for number of days")
 display_current_datetime()
 calculate_future_date()
 
