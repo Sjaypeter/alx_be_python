@@ -1,18 +1,14 @@
-#1.Define class of bank account
-account_balance = 0
-class BankAccount():
+class BankAccount:
     def __init__(self,account_balance):
-        self.accountbalance = account_balance
-    def deposit(self):
-        amount += self.accountbalance
-        print(f"Your account balance is {amount}") 
-    def withdraw(self):
-        amount =- self.accountbalance
-        if amount < self.accountbalance:
-            return False
-        print(f"Your account balance is {amount}")
+        self.account_balance = account_balance
+        initial_balance = 0
+    def deposit(self,amount):
+        amount += self.account_balance
+    def withdraw(self,amount):
+        amount -= self.account_balance
     def display_balance(self):
-        print(f"Your account balance is {self.accountbalance}")
+        print(f"account balance is {self.account_balance}")
+        
 
         
         
