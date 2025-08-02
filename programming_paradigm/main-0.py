@@ -26,5 +26,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-deposit1 = BankAccount(100)
+main()
