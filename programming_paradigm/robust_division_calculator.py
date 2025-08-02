@@ -1,4 +1,4 @@
-def safe_divide(numerator, denominator):
+def safe_divide(numerator,denominator):
     try:
         numerator = float(input("Enter numerator: "))
         denominator = float(input("Enter denominator: "))
