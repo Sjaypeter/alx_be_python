@@ -8,30 +8,30 @@ class TestSimpleCalculator(unittest.TestCase):
 
     
     def test_addition(self):
-        self.assertEqual(SimpleCalculator.add(10,5),5)
-        self.assertEqual(SimpleCalculator.add(-10,5),-5)
-        self.assertEqual(SimpleCalculator.add(-10,-5),-15)
+        self.assertEqual(self.calc.add(10,5),15)
+        self.assertEqual(self.calc.add(-10,5),-5)
+        self.assertEqual(self.calc.add(-10,-5),-15)
         
     def test_subtraction(self):
-        self.assertEqual(SimpleCalculator.subtract(10,5),5)
-        self.assertEqual(SimpleCalculator.subtract(-10,-5),-15)
-        self.assertEqual(SimpleCalculator.subtract(-10,5),-5)
-        self.assertEqual(SimpleCalculator.subtract(10,10),0)
+        self.assertEqual(self.calc.subtract(10,5),5)
+        self.assertEqual(self.calc.subtract(-10,-5),-5)
+        self.assertEqual(self.calc.subtract(-10,5),-15)
+        self.assertEqual(self.calc.subtract(10,10),0)
     
     def test_multiply(self):
-        self.assertEqual(SimpleCalculator.multiply(10,5),50)
-        self.assertEqual(SimpleCalculator.multiply(10,-5),-50)
-        self.assertEqual(SimpleCalculator.multiply(-10,-5),50)
-        self.assertEqual(SimpleCalculator.multiply(10,2.5),25)
+        self.assertEqual(self.calc.multiply(10,5),50)
+        self.assertEqual(self.calc.multiply(10,-5),-50)
+        self.assertEqual(self.calc.multiply(-10,-5),50)
+        self.assertEqual(self.calc.multiply(10,2.5),25)
         
     def test_divide(self):
-        self.assertEqual(SimpleCalculator.divide(10,5),2)
-        self.assertEqual(SimpleCalculator.divide(-10,5),-2)
-        self.assertEqual(SimpleCalculator.divide(-10,-5),2)
-        self.assertEqual(SimpleCalculator.divide(5,2),2.5)
-        self.assertEqual(SimpleCalculator.divide(5,-2),-2.5)
-        with self.assertRaises(ValueError):
-            SimpleCalculator.divide(10,0)
+        self.assertEqual(self.calc.divide(10,5),2)
+        self.assertEqual(self.calc.divide(-10,5),-2)
+        self.assertEqual(self.calc.divide(-10,-5),2)
+        self.assertEqual(self.calc.divide(5,2),2.5)
+        self.assertEqual(self.calc.divide(5,-2),-2.5)
+        self.assertIsNone(self.calc.divide(10,0))
+        self.assertIsNone(self.calc.divide(0,0))
             
 if __name__ == "__main__":
     unittest.main()
