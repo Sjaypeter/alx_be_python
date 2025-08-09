@@ -1,7 +1,6 @@
 class Calculator:
     
-    def __init__(self,calculation_type):
-        self.calculation_type = "Arithmetic Operations"
+    calculation_type = "Arithmetic Operations"
     
     
     @staticmethod
