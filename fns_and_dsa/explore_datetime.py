@@ -12,7 +12,7 @@ def calculate_future_date():
     tdelta = timedelta(days= days_to_add)
     
     future_date = tday + tdelta
-    formatted_future_date = future_date.strftime("%Y-%M-%D")
+    formatted_future_date = future_date.strftime("%Y-%m-%d")
     print(f"Future date: {future_date}")
 display_current_datetime()
 calculate_future_date()

@@ -16,7 +16,7 @@ shopping_list = []
 is_running = True
 while is_running:
     display_menu()
-    choice = (int(input("Enter your choice(1-4): ")))
+    choice = (input("Enter your choice(1-4): "))
     if choice == "1":
         add_item()
     elif choice == "2":
